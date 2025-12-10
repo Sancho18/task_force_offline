@@ -1,0 +1,47 @@
+name: task_force_offline
+description: "Offline First Todo App with Sync capabilities."
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.10.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # --- Arquitetura e Estado ---
+  flutter_bloc: ^8.1.4
+  equatable: ^2.0.5
+  get_it: ^7.6.0        # Injeção de dependência (Crucial para MVVM limpo)
+  injectable: ^2.3.2    # Gerador de código para o GetIt
+
+  # --- Dados Locais (SQLite/Drift) ---
+  drift: ^2.16.0
+  sqlite3_flutter_libs: ^0.5.20
+  path_provider: ^2.1.2
+  path: ^1.9.0
+
+  # --- Rede e Sincronização ---
+  dio: ^5.4.1
+  connectivity_plus: ^5.0.2     # Checar conexão
+  internet_connection_checker: ^1.0.0+1 # Checagem real de dados (ping)
+  uuid: ^4.3.3                  # Gerar IDs únicos offline
+
+  # --- UI ---
+  google_fonts: ^6.1.0
+  intl: ^0.19.0
+  cupertino_icons: ^1.0.8
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+  
+  # --- Code Generation ---
+  build_runner: ^2.4.8
+  drift_dev: ^2.16.0
+  injectable_generator: ^2.4.1
+
+flutter:
+  uses-material-design: true
